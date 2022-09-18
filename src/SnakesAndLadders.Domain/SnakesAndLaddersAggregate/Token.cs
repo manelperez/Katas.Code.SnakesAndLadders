@@ -6,6 +6,14 @@ namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
     {
         public int Square { get; set; }
 
+        public bool Winner
+        {
+            get
+            {
+                return Square.Equals(100);
+            }
+        }
+
         public Token()
         {
             Square = 1;
