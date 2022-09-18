@@ -116,6 +116,21 @@ namespace SnakesAndLadders.Tests.UnitTests
             Assert.InRange(sut.Dice.Value, low, high);
         }
 
+        //** UAT2**
+        //Given the player rolls a 4
+        //When they move their token
+        //Then the token should move 4 spaces
+        [Theory]
+        [InlineData(10)]
+        public void US_3_UAT2(int input)
+        {
+            Game sut = new();
+            sut.AddPlayers(1);
+            sut.Tokens.First().Square = input;
+            sut.DiceRoll();
+            sut.Tokens.First().Move(sut.Dice.Value);
 
+            Assert.Equal(input + sut.Dice.Value, sut.Tokens.First().Square);
+        }
     }
 }
