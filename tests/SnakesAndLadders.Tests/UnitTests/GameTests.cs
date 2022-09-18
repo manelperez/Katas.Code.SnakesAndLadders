@@ -1,4 +1,5 @@
-using SnakesAndLadders.Domain;
+using SnakesAndLadders.Domain.SnakesAndLaddersAggregate;
+using SnakesAndLadders.Domain.SnakesAndLaddersAggregate.Interfaces;
 
 namespace SnakesAndLadders.Tests.UnitTests
 {
@@ -17,9 +18,10 @@ namespace SnakesAndLadders.Tests.UnitTests
         [InlineData(1)]
         public void US_1_UAT1(int expected)
         {
-            Token sut = new();
+            IGame sut = new Game();
+            sut.AddPlayers(1);
 
-            Assert.Equal(expected, sut.Square);
+            Assert.Equal(expected, sut.Tokens.First().Square);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿using SnakesAndLadders.Domain.Interfaces;
+﻿using SnakesAndLadders.Domain.SnakesAndLaddersAggregate.Interfaces;
 
-namespace SnakesAndLadders.Domain
+namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
 {
     public class Token : IToken
     {
