@@ -10,5 +10,15 @@ namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
         {
             Square = 1;
         }
+
+        public void Move(int spaces)
+        {
+            int currentSquare = Square;
+            Square += spaces;
+            if (Square > 100)
+            {
+                Square = currentSquare;
+            }
+        }
     }
 }
