@@ -7,5 +7,6 @@ namespace SnakesAndLadders.Application.Services.Interfaces
         GameDto Start(int numberOfPlayers);
         int DiceRoll();
         GameDto Move(int currentPlayer, int spaces);
+        GameDto NextPlayer();
     }
 }

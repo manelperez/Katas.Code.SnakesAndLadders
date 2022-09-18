@@ -11,6 +11,9 @@ namespace SnakesAndLadders.Application.Mappers
             {
                 NumberOfPlayers = game.Tokens.Count,
                 DieValue = game.Dice.Value,
+                CurrentPlayer = game.CurrentPlayer,
+                Square = game.Tokens[game.CurrentPlayer - 1].Square,
+                HasWinner = game.HasWinner
             };
         }
 

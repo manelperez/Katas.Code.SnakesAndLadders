@@ -1,7 +1,7 @@
 using SnakesAndLadders.Domain.SnakesAndLaddersAggregate;
 using SnakesAndLadders.Domain.SnakesAndLaddersAggregate.Interfaces;
 
-namespace SnakesAndLadders.Tests.UnitTests
+namespace SnakesAndLadders.Tests.UnitTests.Domain
 {
     public class GameTests
     {

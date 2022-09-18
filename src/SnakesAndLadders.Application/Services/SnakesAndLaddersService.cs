@@ -31,5 +31,11 @@ namespace SnakesAndLadders.Application.Services
             game.Tokens[currentPlayer - 1].Move(spaces);
             return GameMapper.ModelFromEntity(game);
         }
+
+        public GameDto NextPlayer()
+        {
+            game.NextPlayer();
+            return GameMapper.ModelFromEntity(game);
+        }
     }
 }

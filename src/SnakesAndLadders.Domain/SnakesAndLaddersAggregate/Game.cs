@@ -6,11 +6,19 @@ namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
     public class Game : IGame
     {
         public List<IToken> Tokens { get; set; }
-
         public DiceRoll Dice { get; set; }
+        public int CurrentPlayer { get; set; }
+        public bool HasWinner
+        {
+            get
+            {
+                return Tokens.Exists(t => t.Winner);
+            }
+        }
 
         public Game()
         {
+            CurrentPlayer = 1;
             Tokens = new();
         }
 
@@ -26,6 +34,18 @@ namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
         {
             Dice = new();
             return Dice.Value;
+        }
+
+        public void NextPlayer()
+        {
+            if (CurrentPlayer == Tokens.Count)
+            {
+                CurrentPlayer = 1;
+            }
+            else
+            {
+                CurrentPlayer++;
+            }
         }
     }
 }
