@@ -77,5 +77,25 @@ namespace SnakesAndLadders.Tests.UnitTests
             Assert.Equal(expectedSquare, sut.Square);
             Assert.Equal(expectedWinner, sut.Winner);
         }
+
+        //** UAT2**
+        //Given the token is on square 97
+        //When the token is moved 4 spaces
+        //Then the token is on square 97
+        //And the player has not won the game
+        [Theory]
+        [InlineData(97, 4, 97, false)]
+        public void US_2_UAT2(int inputSquare, int inputSpaces, int expectedSquare, bool expectedWinner)
+        {
+            IToken sut = new Token
+            {
+                Square = inputSquare
+            };
+            sut.Move(inputSpaces);
+
+            Assert.Equal(expectedSquare, sut.Square);
+            Assert.Equal(expectedWinner, sut.Winner);
+        }
+
     }
 }
