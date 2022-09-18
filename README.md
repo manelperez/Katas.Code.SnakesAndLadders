@@ -1,3 +1,29 @@
+Partial game logic. It has been developed with the basic requirements.
+
+Author
+------
+
+- Manel Perez Clot
+
+## Technologies
+
+* [.NET 6](https://dotnet.microsoft.com/download)
+* [C# 10](https://docs.microsoft.com/en-us/dotnet/csharp)
+* [xUnit 2.4.1](https://www.nuget.org/packages/xunit)
+
+#### Prerequisites
+
+* [.NET SDK](https://dotnet.microsoft.com/download/dotnet)
+
+## Run
+
+<details>
+<summary>Command Line</summary>
+
+Open directory **src\SnakesAndLadders.ConsoleApp** in command line and execute **dotnet run**.
+
+</details>
+
 # Voxel Technical Interview - SnakesAndLadders
 
 Thanks for willing to apply to work with us. You can see our open positions [here](https://www.voxelgroup.net/people/en/home-eng/#page6)
