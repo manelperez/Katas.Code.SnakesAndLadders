@@ -97,5 +97,25 @@ namespace SnakesAndLadders.Tests.UnitTests
             Assert.Equal(expectedWinner, sut.Winner);
         }
 
+        //### US 3 - Moves Are Determined By Dice Rolls
+        //As a player
+        //I want to move my token based on the roll of a die
+        //So that there is an element of chance in the game
+
+        //**UAT1**
+        //Given the game is started
+        //When the player rolls a die
+        //Then the result should be between 1-6 inclusive
+        [Theory]
+        [InlineData(1, 6)]
+        public void US_3_UAT1(int low, int high)
+        {
+            IGame sut = new Game();
+            sut.DiceRoll();
+
+            Assert.InRange(sut.Dice.Value, low, high);
+        }
+
+
     }
 }

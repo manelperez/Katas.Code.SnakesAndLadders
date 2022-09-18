@@ -1,10 +1,13 @@
 ﻿using SnakesAndLadders.Domain.SnakesAndLaddersAggregate.Interfaces;
+using SnakesAndLadders.Domain.SnakesAndLaddersAggregate.ValueObjects;
 
 namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
 {
     public class Game : IGame
     {
         public List<IToken> Tokens { get; set; }
+
+        public DiceRoll Dice { get; set; }
 
         public Game()
         {
@@ -17,6 +20,12 @@ namespace SnakesAndLadders.Domain.SnakesAndLaddersAggregate
             {
                 Tokens.Add(new Token());
             }
+        }
+
+        public int DiceRoll()
+        {
+            Dice = new();
+            return Dice.Value;
         }
     }
 }
