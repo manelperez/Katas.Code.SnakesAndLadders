@@ -1,3 +1,5 @@
+using SnakesAndLadders.Domain;
+
 namespace SnakesAndLadders.Tests.UnitTests
 {
     public class GameTests
@@ -15,7 +17,9 @@ namespace SnakesAndLadders.Tests.UnitTests
         [InlineData(1)]
         public void US_1_UAT1(int expected)
         {
-            
+            Token sut = new();
+
+            Assert.Equal(expected, sut.Square);
         }
     }
 }
