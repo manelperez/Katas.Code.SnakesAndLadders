@@ -37,5 +37,21 @@ namespace SnakesAndLadders.Tests.UnitTests
 
             Assert.Equal(expected, sut.Square);
         }
+
+        //**UAT3**
+        //Given the token is on square 1
+        //When the token is moved 3 spaces
+        //And then it is moved 4 spaces
+        //Then the token is on square 8
+        [Theory]
+        [InlineData(3, 4, 8)]
+        public void US_1_UAT3(int inputMove1, int inputMove2, int expected)
+        {
+            Token sut = new();
+            sut.Move(inputMove1);
+            sut.Move(inputMove2);
+
+            Assert.Equal(expected, sut.Square);
+        }
     }
 }
