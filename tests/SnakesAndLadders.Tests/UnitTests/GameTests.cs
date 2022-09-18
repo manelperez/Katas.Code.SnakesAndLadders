@@ -47,7 +47,7 @@ namespace SnakesAndLadders.Tests.UnitTests
         [InlineData(3, 4, 8)]
         public void US_1_UAT3(int inputMove1, int inputMove2, int expected)
         {
-            Token sut = new();
+            IToken sut = new Token();
             sut.Move(inputMove1);
             sut.Move(inputMove2);
 
@@ -124,7 +124,7 @@ namespace SnakesAndLadders.Tests.UnitTests
         [InlineData(10)]
         public void US_3_UAT2(int input)
         {
-            Game sut = new();
+            IGame sut = new Game();
             sut.AddPlayers(1);
             sut.Tokens.First().Square = input;
             sut.DiceRoll();
